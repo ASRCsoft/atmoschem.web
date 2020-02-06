@@ -1,0 +1,81 @@
+
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// using sass to store footer height variable
+// following css example at https://css-tricks.com/couple-takes-sticky-footer/
+
+$footer-height: 266px;
+
+body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+}
+.content {
+    padding: 10px 20px;
+    margin: 0 auto -$footer-height;
+}
+footer, .push {
+    height: $footer-height;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    box-shadow: inset 0 8px 5px -5px #888;
+    background-color: white;
+}
+
+a {
+    color: #0000EE;
+    &:visited {
+        color: #551A8B;
+    }
+    &:hover {
+        color: #0000EE;
+	background-color: transparent;
+    }
+}
+
+
+// ok just regular style stuff here
+.dark {
+    background-color: #383838;
+    color: white;
+    a {
+        color: #5CCBFF;
+        &:visited {
+            color: #C087FE;
+        }
+        &:hover {
+            color: #5CCBFF;
+            background-color: transparent;
+        }
+    }
+}
+
+#formcontainer {
+    clear: both;
+}
+
+#siteCarousel {
+    /* float: right; */
+    width: 426px;
+    margin: 30px auto;
+    img {
+	/* max-width: 500px; */
+	width: 426px;
+	height: 320px;
+    }
+}
+
+#xcite {
+    float: right;
+    padding-right: 15px;
+}

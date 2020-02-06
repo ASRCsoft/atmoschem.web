@@ -1,0 +1,78 @@
+<div class="container">
+    <%= image_tag("NYS_sites.png", :alt => "map of research sites", :id => "sites") %>
+    
+    <p>Welcome to the Atmospheric Science Research Center's Air Quality Monitoring Products page. Here, you will find finalized observation data for our research sites at Whiteface Mountain (WFM, lodge and summit), Pinnacle State Park (PSP) and Queens College (QCO).</p>
+
+    <p>Data provided includes chemical species data (including criteria gases), meteorological data, and particulate matter filter data. For information about specific sites and years, please download the unique readmes in the site and year subdirectories.</p>
+
+    <p>All files are provided in .csv format. Each file comes with a header, parameter name and value/unit column, and a quality control (QC) column. The QC column provided follows NARSTO convention. The data files for the current year are updated quarterly throughout the year.</p>
+
+    <p>Any questions should be directed to Mr. William May at wcmay@albany.edu, or Dr. James Schwab at jschwab@albany.edu.</p>
+
+    <p>To gain access to the data, fill out the form below.</p>
+
+    <div class="row" id="formcontainer">
+	<div class="col col-md-6">
+	    <h2>New User</h2>
+
+	    <%= render 'form', user: @user %>
+
+	</div>
+	<div class="col col-md-6 text-center">
+
+	    <!-- <div id="formcontainer"> -->
+	    <div id="siteCarousel" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+		    <li data-target="#siteCarousel" data-slide-to="0" class="active"></li>
+		    <li data-target="#siteCarousel" data-slide-to="1"></li>
+		    <li data-target="#siteCarousel" data-slide-to="2"></li>
+		    <li data-target="#siteCarousel" data-slide-to="3"></li>
+		</ol>
+		<div class="carousel-inner">
+		    <div class="carousel-item active">
+			<%= image_tag("wfms_pic.png", :alt => "Whiteface Mountain site", :class => "d-block") %>
+			<div class="carousel-caption d-none d-md-block">
+			    <h5>Whiteface Mountain (summit)</h5>
+			    <!-- <p>Whiteface Mountain (summit)</p> -->
+			</div>
+		    </div>
+		    <div class="carousel-item">
+			<%= image_tag("Pinnacle_2013_3.JPG", :alt => "Pinnacle something", :class => "d-block") %>
+			<div class="carousel-caption d-none d-md-block">
+			    <h5>Pinnacle State Park</h5>
+			    <!-- <p>Pinnacle State Park</p> -->
+			</div>
+		    </div>
+		    <div class="carousel-item">
+			<%= image_tag("queens_college.png", :alt => "Queens College", :class => "d-block") %>
+			<div class="carousel-caption d-none d-md-block">
+			    <h5>Queens College</h5>
+			    <!-- <p>Queens College</p> -->
+			</div>
+		    </div>
+		    <div class="carousel-item">
+			<%= image_tag("wfml_pic.png", :alt => "wfml", :class => "d-block") %>
+			<div class="carousel-caption d-none d-md-block">
+			    <h5>Whiteface Mountain (lodge)</h5>
+			    <!-- <p>Whiteface Mountain (lodge)</p> -->
+			</div>
+		    </div>
+		</div>
+		<a class="carousel-control-prev" href="#siteCarousel" role="button" data-slide="prev">
+		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		    <span class="sr-only">Previous</span>
+		</a>
+		<a class="carousel-control-next" href="#siteCarousel" role="button" data-slide="next">
+		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		    <span class="sr-only">Next</span>
+		</a>
+	    </div>
+
+	    <script>
+	     $('.carousel').carousel();
+	    </script>
+
+
+	</div>
+    </div>
+</div>
