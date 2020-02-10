@@ -75,7 +75,7 @@ GEM
     crass (1.0.6)
     erubi (1.7.1)
     execjs (2.7.0)
-    ffi (1.9.23)
+    ffi (1.12.2)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     i18n (1.0.1)
@@ -212,7 +212,7 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 RUBY VERSION
-   ruby 2.3.1p112
+   ruby 2.5.1p57
 
 BUNDLED WITH
-   1.16.1
+   1.16.4
